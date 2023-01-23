@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+int main() {
+    // Create an integer & float variable that will store the number we get from the user
+    int num1, num2, num3, remainder;
+    int op;
+
+    // Ask the user to type a number & operator to be used
+    printf("------ Welcome to BSIT Calculator ------\n\n");
+    printf("--- 1 for Addition ---\n");
+    printf("--- 2 for Subtraction ---\n");
+    printf("--- 3 for Multiplication ---\n");
+    printf("--- 4 for Division ---\n");
+    printf("Please choose one operator to used:");
+    scanf("%d", &op);
+
+    //Checking op if valid
+    if (op>4){
+        printf("Error, Invaid Input!");
+    }
+    else
+    {
+        printf("Please enter your first value: "); 
+        scanf("%d", &num1);
+        printf("Please enter your second value: "); 
+        scanf("%d", &num2);
+    }
+
+    //Computation
+    if (op==1)
+    {
+        num3 = num1 + num2;
+        printf("%d + %d = %d", num1, num2, num3);
+    }
+    else if(op == 2){
+        num3 = num1 - num2;
+        printf("%d - %d = %d", num1, num2, num3);
+    }
+    else if(op == 3){
+        num3 = num1 * num2;
+        printf("%d * %d = %d", num1, num2, num3);
+    }
+    else if(op == 4){
+        if (num2 == 0)
+        {
+            printf("Can't be divided");
+        } 
+        else 
+        {   
+            // Computes quotient
+            num3 = num1 / num2;
+            // Computes remainder
+            remainder = num1 % num2;
+            
+            printf("%d / %d = %d ", num1, num2, num3);
+
+            //Checking if there is a remainder in num3
+            if (remainder == 0)
+            {
+                printf("There is no Remainder");
+            }
+            else
+            {
+                printf("The remainder of %d is %d", num3, remainder);
+            }
+            
+        }
+        
+    }
+    else
+    {
+        printf("Error, please try again!");
+    }
+
+
+  return 0;
+}
