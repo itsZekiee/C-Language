@@ -50,7 +50,8 @@ int main() {
     //conversion
     if (unit1 == 1)
     {
-        result = num1;
+        result = num1 * meter_convertion.meter_mile;
+        printf("The results is");
     }
     
 
