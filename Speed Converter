@@ -1,67 +1,60 @@
 #include <stdio.h>
 
- //converting units
+    //converting units
     struct meter_convertion
     {
-        //float meter_mile: 2.237; //multiply
-        //float meter_foot: 3.281; //meter
-        //float meter_km: 3.6; //multiply
-        //float meter_knot: 1.944; //multiply
+        float meter_mile: 2.237; //multiply
+        float meter_foot: 3.281; //meter
+        float meter_km: 3.6; //multiply
+        float meter_knot: 1.944; //multiply
     };
 
     struct mile_conversion
     {
-        //float mile_meter: 2.237; //multiply
-        //float mile_foot: 1.467; //multiply
-        //float mile_km: 1.609; //multiply
-        //float mile_knot: 1.151 //divide
+        float mile_meter: 2.237; //multiply
+        float mile_foot: 1.467; //multiply
+        float mile_km: 1.609; //multiply
+        float mile_knot: 1.151 //divide
     };
 
     struct foot_convertion
     {
-        //float foot_mile: 1.467; //divide
-        //float foot_meter: 3.281; //divide
-        //float foot_km: 1.097; //multiply
-        //float foot_knot: 1.688; //divide
+        float foot_mile: 1.467; //divide
+        float foot_meter: 3.281; //divide
+        float foot_km: 1.097; //multiply
+        float foot_knot: 1.688; //divide
     };
 
     struct km_convertion
     {
-        //float km_meter: 3.6; //divide
-        //float km_mile: 1.609; //divide
-        //float km_foot: 1.097; //divide
-        //float km_knot: 1.852; //divide
+        float km_meter: 3.6; //divide
+        float km_mile: 1.609; //divide
+        float km_foot: 1.097; //divide
+        float km_knot: 1.852; //divide
     };
 
     struct knot_convertion
     {
-        //float knot_meter: 1.944; //divide
-        //float knot_km: 1.852; //multiply
-        //float knot_mile: 1.151; //multiply
-        //float knot_foot: 1.688; //multiply
+        float knot_meter: 1.944; //divide
+        float knot_km: 1.852; //multiply
+        float knot_mile: 1.151; //multiply
+        float knot_foot: 1.688; //multiply
     };
 
-        float num1, result;
-        char unit1[5];
-        char unit2[5];
+    float num1, result;
+    char unit1[5];
+    char unit2[5];
 
 int main() {
     
-   printf("Welcome to BSIT Speed Converter\n\n");
-   printf("Available units to be used:\n");
-   printf("1. Kilometer\n");
-   printf("2. Meter\n");
-   printf("3. Mile\n");
-   printf("4. Foot\n");
-   printf("5. Knot\n");
+    //conversion
+    if (unit1 == 1)
+    {
+        result = num1;
+    }
+    
 
-   //Asking the user for data to be converted
-   printf("Please enter your first value and unit:");
-   scanf("%f %c", &num1, unit1);
-   printf("Please enter unit you want to be converted:");
-   scanf("%c", unit2);
-
-   //convertion
+   
 
     return 0;
 }
