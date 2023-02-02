@@ -1,0 +1,55 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+    //Storing Variables;
+    char name[100];
+    char course[100];
+    int num;
+    int ans;
+
+    
+    //Asking for data from the User;
+    printf("/================== Let's Identify ==================/\n");
+    printf("Please enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    printf("Please enter your course: ");
+    fgets(course, sizeof(course), stdin);
+    
+    printf("/================== Let's Get Started ==================/\n");
+    do
+    {
+        fflush(stdin);
+        printf("Please Enter a Number: ");
+        //Identifying if the value is Int or Char;
+        if(scanf("%d", &num) == 1)
+        {
+            if (num > 0)//checking if the value is greater than zero
+            {
+                printf("%d is a Positive number.\n", num);
+            }
+            else if (num < 0) //checking if the value is less than zero
+            {
+                printf("%d is a Negative number.\n", num);
+            }
+            else // falls if the value is equal to zero
+            {
+                printf("%d is equal to Zero.\n", num);
+            }
+        }
+        else
+        {
+            printf("Unsuccessful\n");
+        }
+        
+        //Asking the user if he/she want to try again;
+        fflush(stdin);
+        printf("Do you want to try again? (1 for Yes, 2 for No): ");
+        scanf("%d", &ans);
+    }
+    while(ans == 1);
+    printf("Good Bye & Thank You! %s, %s", name, course);
+    
+    return 0;
+}
