@@ -1,0 +1,106 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("\n\n\t/================== WELCOME TO BEE CONVERTER ==================/\n\n");
+    printf("\t\t\t\tENTER 1 FOR METER \n");
+    printf("\t\t\t\tENTER 2 FOR CENTIMETER \n");
+    printf("\t\t\t\tENTER 3 FOR MILE \n");
+    printf("\t\t\t\tEnter 4 for Yard \n");
+    printf("\t\t\t\tEnter 5 for Foot\n");
+    printf("\t\t\t\tEnter 6 for Inch \n");
+    printf("\t\t\t\tEnter 7 for Kilometer \n\n");
+
+    printf("Choose one length type to be converted");
+}
+
+void kilometer()
+{
+    int option;
+    //options
+    printf("Enter 1 for Meter \n");
+    printf("Enter 2 for Centimeter \n");
+    printf("Enter 3 for Mile \n");
+    printf("Enter 4 for Yard \n");
+    printf("Enter 5 for Foot\n");
+    printf("Enter 6 for Inch \n");
+
+    //asking data from the user
+    printf("Please enter what type of length u want to convert: ");
+    scanf("%d", &option);
+
+    if (option == 1)
+    {
+        float _kMm = 1 * 1000; //kilometer to meter
+        printf("%dkm is %fkm", option, _kMm);
+    }
+    else if (option == 2)
+    {
+        float _kMcM = 1  * 100000; //kilometer to centimeter
+        printf("%dkm is %fkm", option, _kMcM);
+    }
+    else if (option == 3)
+    {
+        float _kM_Mile = 1 / 1.609; //kilometer to mile
+        printf("%dkm is %fkm", option, _kM_Mile);
+    }
+    else if (option == 4)
+    {
+        float _kM_Yard = 1 * 1094; //kilometer to yard
+        printf("%dkm is %fkm", option, _kM_Yard);
+    }
+    else if (option == 5)
+    {
+        float _km_Foot = 1 * 3281; //kilometer to foot
+        printf("%dkm is %fkm", option, _km_Foot);
+    }
+    else if (option == 6)
+    {
+        float _kMiN = 1 * 39370; //kilometer to inch
+        printf("%dkm is %fkm", option, _kMiN);
+    }
+
+}
+
+void meter()
+{   
+    int option;
+    //options
+    printf("Enter 1 for Meter \n");
+    printf("Enter 2 for Centimeter \n");
+    printf("Enter 3 for Mile \n");
+    printf("Enter 4 for Yard \n");
+    printf("Enter 5 for Foot\n");
+    printf("Enter 6 for Inch \n");
+
+    //asking data from the user
+    printf("Please enter what type of length u want to convert: ");
+    scanf("%d", &option);
+
+    if (option == 1)
+    {
+        float _mKm = 1 / 1000; // meter to kilometer
+        printf("%dm is %fkm");
+    }
+    else if (option == 2)
+    {
+        float _mCm = 1 * 100; // meter to centimeter
+    }
+    else if (option == 3)
+    {
+        double _mMile = 1 / 1609; // meter to Mile
+    }
+    else if (option == 4)
+    {
+        float _mYard = 1 * 1.094; //meter to yard
+    }
+    else if (option == 5)
+    {
+        float _mFoot = 1 *  3.281; //meter to foot
+    }
+    else if (option == 6)
+    {
+        float _mInch = 1 * 39.37; //meter to inch
+    }
+    
+}
