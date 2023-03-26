@@ -6,16 +6,15 @@ int main() {
     {
         printf("Enter a positive integer: ");
         scanf("%d", &num);
-        printf("Factors of %d are: \n", num);
+        printf("Factors of %d are: ", num);
         for (i = 1; i <= num; ++i) {
             if (num % i == 0) {
-                printf("%d ", i);
+                printf("%d \n", i);
             }
         }
-        printf("do you like to try again? (Y or N)");
-        scanf("%s", option);
-    } while (option == "Y");
+        printf("do you like to try again? (Y or N): ");
+        scanf("%s", &option);
+    } while (option != 'N' );
     
     return 0;
 }
-
