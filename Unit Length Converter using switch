@@ -1,0 +1,132 @@
+#include <stdio.h>
+//Unit Conversion
+int main()
+{
+    //declaring variables.
+    int ans_one, ans_two,num1, ans;
+    float solution;
+
+    //Introduction.
+    printf("\n\t/=============== Welcome to Unit Convertion Kuno! ===============/\n");
+    
+    do
+    {
+    //options for unit convertions
+    printf("\t\t(1) Inches (2) Centimeter (3) Foot (4) Meter (5) Exit\n\n");
+    printf("Please enter your 1st value:\t");
+    scanf("%i", &num1);
+    //1st unit
+    printf("Please enter your 1st unit:\t");
+    //loop everytime the use enter a char value
+    while (scanf("%i", &ans_one) != 1)
+    {
+        //options for unit convertions
+        printf("Please enter your 1st unit:\t");
+        scanf("%i", &ans_one);
+        while(getchar() != '\n');        
+    }
+
+    //second unit
+    printf("Please enter your 2st unit:\t");
+    while (scanf("%i", &ans_two) != 1)
+    {
+        //options for unit convertions
+        printf("Please enter your 2st unit:\t");
+        scanf("%i", &ans_two);
+        while(getchar() != '\n');        
+    } 
+    
+    
+    switch (ans_one)
+    {
+    case 1:
+        switch (ans_two)
+        {
+        case 2:
+            solution = num1 * 2.54;
+            printf("%0.2f\n", solution);
+            break;
+        case 3:
+            solution = num1 / 12;
+            printf("%0.2f\n", solution);
+            break;
+        case 4:
+            solution = num1 / 39.37;
+            printf("%0.2f\n", solution);
+            break;
+        case 5:
+            printf("Thank You and Good Bye");
+            break;
+        }
+        break;
+    case 2: //Centimeter
+        switch (ans_two)
+        {
+        case 1:
+            solution = num1 / 2.54;
+            printf("%0.2f\n", solution);
+            break;
+        case 3:
+            solution = num1 / 30.48;
+            printf("%0.2f\n", solution);
+            break;
+        case 4:
+            solution = num1 / 100;
+            printf("%0.2f\n", solution);
+            break;
+        case 5:
+            printf("Thank You and Good Bye");
+            
+            break;
+        }
+        break;
+        case 3: //Foot
+        switch (ans_two)
+        {
+        case 1:
+            solution = num1 * 12;
+            printf("%0.2f\n", solution);
+            break;
+        case 2:
+            solution = num1 * 30.48;
+            printf("%0.2f\n", solution);
+            break;
+        case 4:
+            solution = num1 / 3.281;
+            printf("%0.2f\n", solution);
+            break;
+        case 5:
+            printf("Thank You and Good Bye");
+            
+            break;
+        }
+        break;
+        case 4: //Meter
+        switch (ans_two)
+        {
+        case 1:
+            solution = num1 * 39.37;
+            printf("%0.2f\n", solution);
+            break;
+        case 2:
+            solution = num1 * 100;
+            printf("%0.2f\n", solution);
+            break;
+        case 3:
+            solution = num1 * 3.281;
+            printf("%0.2f\n", solution);
+            break;
+        case 5:
+            printf("Thank You and Good Bye");
+            break;
+        }
+        break;
+    }
+
+    printf("Do you want to try again?\t");
+    scanf("%d", &ans);
+    
+    }while (ans == 1);
+
+    return 0;
+}
